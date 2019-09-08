@@ -53,3 +53,12 @@ query neo4j using cypher in org-mode blocks
 : #+RESULTS:
 
 [[http://i.imgur.com/dpCyOo5.png]]
+
+
+* Changlog
+
+- [X] merge two PRs in zweifisch repo:
+  - [X] fix babel header arguments
+  - [X] use cURL RESTful request instead of neo4j-shell command
+  - [X] support Graphviz dot graph file result
+  - [X] fix cURL RESTful request port typos
