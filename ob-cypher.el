@@ -5,7 +5,7 @@
 ;; Author: ZHOU Feng <zf.pascal@gmail.com>
 ;; URL: http://github.com/zweifisch/ob-cypher
 ;; Keywords: org babel cypher neo4j
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Created: 8th Feb 2015
 ;; Package-Requires: ((s "1.9.0") (cypher-mode "0.0.6") (dash "2.10.0") (dash-functional "1.2.0"))
 

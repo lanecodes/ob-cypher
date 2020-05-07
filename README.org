@@ -4,7 +4,7 @@
 
 query neo4j using cypher in org-mode blocks
 
-** options
+** Options
 
 | option       | example                                      |
 |--------------+----------------------------------------------|
@@ -15,7 +15,7 @@ query neo4j using cypher in org-mode blocks
 | =:password=  | ="neo4j"=                                    |
 | =:file=      | requires curl and graphviz =:file graph.png= |
 
-** examples
+** Examples
 
 : #+BEGIN_SRC cypher
 : CREATE (matrix1:Movie { title : 'The Matrix', year : '1999-03-31' })
@@ -54,8 +54,9 @@ query neo4j using cypher in org-mode blocks
 
 [[http://i.imgur.com/dpCyOo5.png]]
 
-
-* Changlog
+** Changelog
+*** [0.0.2] - 2019-09-08
+Work courtesy of [[https://github.com/ifitzpat][ifitzpat]] and [[https://github.com/stardiviner][stardiviner]] :clap:
 
 - [X] merge two PRs in zweifisch repo:
   - [X] fix babel header arguments
