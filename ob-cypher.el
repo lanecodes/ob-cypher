@@ -101,6 +101,10 @@
 
 
 (defun ob-cypher/query (statement host port authstring)
+  "Return JSON formatted results of Cypher STATEMENT as a string.
+Query is run against the Neo4j HTTP API. PORT is the HTTP (not Bolt)
+port and AUTHSTRING is the base64-encoded string of
+`username:password'."
   (let* ((statement (s-replace "\"" "\\\"" statement))
          (body (format "{\"statements\":[{\"statement\":\"%s\",\"resultDataContents\":[\"graph\",\"row\"]}]}"
                        (s-join " " (s-lines statement))))
