@@ -5,7 +5,7 @@
 ;; Author: ZHOU Feng <zf.pascal@gmail.com>
 ;; URL: http://github.com/zweifisch/ob-cypher
 ;; Keywords: org babel cypher neo4j
-;; Version: 0.0.2
+;; Version: 1.0.0
 ;; Created: 8th Feb 2015
 ;; Package-Requires: ((s "1.9.0") (cypher-mode "0.0.6") (dash "2.10.0") (dash-functional "1.2.0"))
 
@@ -149,7 +149,6 @@ port and AUTHSTRING is the base64-encoded string of
 
 (defun org-babel-execute:cypher (body params)
   (let* ((host (or (cdr (assoc :host params) ) "127.0.0.1"))
-         (port (or (cdr (assoc :port params) ) 1337))
          (http-port (or (cdr (assoc :http-port params) ) 7474))
          (username (or (cdr (assoc :username params) ) "neo4j"))
          (password (or (cdr (assoc :password params) ) "neo4j"))

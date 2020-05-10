@@ -5,15 +5,15 @@
 query neo4j using cypher in org-mode blocks
 
 ** Options
+This package is a wrapper around the [[https://neo4j.com/docs/http-api][Neo4j HTTP API]]. At present the Bolt protocol is not supported.
 
-| option       | example                                      |
-|--------------+----------------------------------------------|
-| =:host=      | =127.0.0.1=                                  |
-| =:port=      | =1337=                                       |
-| =:http-port= | =7474=                                       |
-| =:username=  | ="neo4j"=                                    |
-| =:password=  | ="neo4j"=                                    |
-| =:file=      | requires curl and graphviz =:file graph.png= |
+| Argument   | Description                       | Example                               | Default   | Comment                    |
+|------------+-----------------------------------+---------------------------------------+-----------+----------------------------|
+| =:host=      | Host                              | =#+BEGIN_SRC cypher :host "192.0.2.1"=  | =127.0.0.1= |                            |
+| =:http-port= | Neo4j HTTP port                   | =#+BEGIN_SRC cypher :http-port 8888=    | =7474=      |                            |
+| =:username=  | Username                          | =#+BEGIN_SRC cypher :username bob=      | =neo4j=     |                            |
+| =:password=  | Password                          | =#+BEGIN_SRC cypher :password password= | =neo4j=     |                            |
+| =:file=      | Image file of graph visualisation | =#+BEGIN_SRC cypher :file graph.png=    | None      | Requires =curl= and =graphviz= |
 
 ** Examples
 
@@ -55,6 +55,10 @@ query neo4j using cypher in org-mode blocks
 [[http://i.imgur.com/dpCyOo5.png]]
 
 ** Changelog
+*** [1.0.0] - 2020-05-10
+- Remove processing of =port= parameter from =org-babel-execute:cypher= as we only support =http-port=, leave =port= available in case Bolt supported in future.
+- Update 'Options' table in =README.org= to reflect change in API.
+
 *** [0.0.2] - 2019-09-08
 Work courtesy of [[https://github.com/ifitzpat][ifitzpat]] and [[https://github.com/stardiviner][stardiviner]] :clap:
 
